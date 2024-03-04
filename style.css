@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+--yellow: hsl(47, 88%, 63%);
+--white: hsl(0, 0%, 100%);
+--grey: hsl(0, 0%, 50%);
+--black: hsl(0, 0%, 7%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0  auto;
+    background-color: var(--yellow);
+    font-family: "Figtree", sans-serif;
+}
+
+main{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 1.6rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 8px 8px 1px var(--black);
+}
+
+.hero{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-weight: 800;
+}
+
+.hero img{
+   width: 10%;
+}
+
+img{
+ border-radius: .6rem;
+ object-fit: fill;
+}
+
+p{
+    line-height: 1.5;
+}
+
+h1{
+    font-size: 1.6rem;
+}
+
+span{
+    border-radius: .4rem;
+    background-color: var(--yellow);
+    padding: .4rem;
+    font-weight: 800;
+}
+
+h1:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+main:has(h1:hover){
+    box-shadow: 16px 16px 1px var(--black);
+}
+
+/*Responsive*/
+
+@media screen and (max-width:450px) {
+    body{
+        margin: 0 1rem;
+    }
+    main{
+        max-width: 320px;
+    }
+}
